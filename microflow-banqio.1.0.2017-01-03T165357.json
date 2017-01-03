@@ -1,1 +1,51 @@
-{"host":"integration.cloud.tibcoapps.com","protocol":"https","basePath":"/6timbdor53drnoimssah447l2b6wflwa","port":"443","rules":[{"path":"/api/v1/banks","method":"get","produces":["application/json"],"frontendPath":"/api/v1/banks","requestRules":[{"policyName":"mg-req-transformation","parameters":[{"name":"name","value":"aey_microflow","type":"String"},{"name":"description","value":"Sample microflow","type":"String"},{"name":"formatRequestFunc","value":"var _ = require( 'lodash' );\n if ( !res ) {\n   res = {\n     \"message\": \"If you pass more than 3 users, only the first 3 users are added, other users will be dropped.\"\n   };\n } else if ( _.isObject( res ) ) {\n   res.message = \"If you pass more than 3 users, only the first 3 users are added, other users will be dropped.\";\n }\n done(res);","type":"String"}]}],"responseRules":[],"operationId":"get-api-v1-banks"},{"path":"/api/v1/banks/{bank_id}/bank","method":"get","produces":["application/json"],"frontendPath":"/api/v1/banks/{bank_id}/bank","requestRules":[],"responseRules":[],"operationId":"get-api-v1-banks-bank"}]}
+{
+  "host": "integration.cloud.tibcoapps.com",
+  "protocol": "https",
+  "basePath": "/6timbdor53drnoimssah447l2b6wflwa",
+  "port": "443",
+  "rules": [
+    {
+      "path": "/api/v1/banks",
+      "method": "get",
+      "produces": [
+        "application/json"
+      ],
+      "frontendPath": "/api/v1/banks",
+      "requestRules": [
+        {
+          "policyName": "mg-req-transformation",
+          "parameters": [
+            {
+              "name": "name",
+              "value": "aey_microflow",
+              "type": "String"
+            },
+            {
+              "name": "description",
+              "value": "Sample microflow",
+              "type": "String"
+            },
+            {
+              "name": "formatRequestFunc",
+              "value": "var _ = require( 'lodash' );\n if ( !res ) {\n   res = {\n     \"message\": \"If you pass more than 3 users, only the first 3 users are added, other users will be dropped.\"\n   };\n } else if ( _.isObject( res ) ) {\n   res.message = \"If you pass more than 3 users, only the first 3 users are added, other users will be dropped.\";\n }\n done(res);",
+              "type": "String"
+            }
+          ]
+        }
+      ],
+      "responseRules": [],
+      "operationId": "get-api-v1-banks"
+    },
+    {
+      "path": "/api/v1/banks/{bank_id}/bank",
+      "method": "get",
+      "produces": [
+        "application/json"
+      ],
+      "frontendPath": "/api/v1/banks/{bank_id}/bank",
+      "requestRules": [],
+      "responseRules": [],
+      "operationId": "get-api-v1-banks-bank"
+    }
+  ]
+}
